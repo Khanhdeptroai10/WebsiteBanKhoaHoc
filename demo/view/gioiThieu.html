@@ -1,0 +1,32 @@
+<div>
+    <h1>{{title}}</h1>
+    <table class="table">
+        <thead>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Năm sinh</th>
+            <th>Chuyên ngành</th>
+        </thead>
+        <tr ng-repeat="item in students">
+            <td>{{$index +1}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.namSinh}}</td>
+            <td>{{item.chuyenNganh}}</td>
+        </tr>
+
+    </table>
+    <h1>Thêm sinh viên</h1>
+
+    <form ng-submit="themMoi()">
+        <label for="" class="form-label">Họ và tên</label>
+        <input type="text" class="form-control" ng-model="ten">
+
+        <label for="" class="form-label">Năm sinh</label>
+        <input type="text" class="form-control" ng-model="namSinh">
+
+        <label for="" class="form-label">Chuyên ngành</label>
+        <input type="text" class="form-control" ng-model="chuyenNganh">
+
+        <button class="btn btn-success" >Thêm mới</button>
+    </form>
+</div>

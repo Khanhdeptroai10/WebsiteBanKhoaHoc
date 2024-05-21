@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/angularjs/list/angular.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body ng-app="demoBuoi5">
+    <div ng-controller="buoi5">
+
+        <h1>Danh sách nhân viên</h1>
+        <table border="1" class="table-bordered">
+            <tr>
+                <th></th>
+                <th>Họ tên</th>
+                <th>Ngày sinh</th>
+                <th>Lương</th>
+                <th>Giới tính</th>
+            </tr>
+            <tr ng-repeat="t in nhanVien | limitTo: number">
+                <td>{{ $index +1}}</td>
+                <td ng-click="sayHello(t.hoTen)">{{t.hoTen}}</td>
+                <td>{{t.ngaySinh | date:"dd-MM-yyyy"}}</td>
+                <td>{{t.luong | currency : '' : 0 }}Đ</td>
+                <td>{{t.gioiTinh == 0 ? "Nam" : "Nữ"}} </td>
+            </tr>
+        </table>
+        <!-- tạo 1 select option 
+            số bản gji được hiện ra 
+            khi thay đổi option thì bản ghi sẽ thay đổi
+
+         -->
+        <select ng-model="number">
+            <!-- ng-model: liên kết dữ liệu 2 chiều
+                liên kết giữa view và biến chưa dữ liệu 
+             -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <button class="btn btn-default" ng-click="sayHello('kahnhtan')"> Click vào đê</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="/angularjs/js/buoi5.js"></script>
+</body>
+
+</html>

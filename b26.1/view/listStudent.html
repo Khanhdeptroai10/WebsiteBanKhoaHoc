@@ -1,0 +1,25 @@
+<div class="card mt-5">
+    <h1>{{title}}</h1>
+   <div>
+       <a href="#!/add-Student"> <button class="btn btn-success" >Thêm mới</button></a>
+        <table class="table">
+            <tr>
+                <td>STT</td>
+                <td>Họ tên</td>
+                <td>Nam sinh</td>
+                <td>Chuyen ngành</td>
+                <td><a href="">Sửa</a></td>
+            </tr>
+            <tr ng-repeat="item in listStudent">
+                <td>{{$index +1}}</td>
+                <td>{{item.ten}}</td>
+                <td>{{item.namSinh}}</td>
+                <td>{{item.chuyenNganh}}</td>
+                <td>
+                    <a href="#!/detail-Student/{{item.id}}"><button class="btn btn-warning">Chi tiết</button></a>
+                    <button class="btn btn-danger" ng-click="deleteStudent(item.id)">Xóa</button>
+                </td>
+            </tr>
+        </table>
+   </div>
+</div>

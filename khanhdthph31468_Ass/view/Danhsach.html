@@ -1,0 +1,30 @@
+<div>
+    <div class="text-center">
+        <strong class=" text-4xl bold">Danh sách</strong>
+    </div>
+    <table class="table">
+        <tr>
+            <td>STT</td>
+            <td>Họ và tên</td>
+            <td>Email</td>
+            <td>Địa điểm học</td>
+            <td>Số điện thoại</td>
+            <td>Ngành học</td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="item in DanhsachStudent">
+            <td>{{ $index +1}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.diadiem}}</td>
+            <td>{{item.SDT}}</td>
+            <td>{{item.nganh}}</td>
+            <td>
+                <a href="#!/detail/{{item.id}}"><button class="btn btn-warning">Chi tiết</button></a>
+                <!-- <button class="btn btn-warning">Chi tiết</button> -->
+                <button class="btn btn-danger" ng-click="deleteStudent(item.id)">Xóa</button>
+            </td>
+        </tr>
+        
+    </table>
+</div>

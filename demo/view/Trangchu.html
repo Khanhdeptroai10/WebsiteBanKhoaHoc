@@ -1,0 +1,28 @@
+<div>
+    <h1>{{title}}</h1>
+    <h1>Thêm sinh viên</h1>
+    <form ng-submit="themMoi()">
+        <label for="" class="form-label">Họ và tên</label>
+        <input type="text" class="form-control" ng-model="inputValue.name">
+
+        <label for="" class="form-label">Địa chỉ</label>
+        <input type="text" class="form-control" ng-model="inputValue.address">
+
+        <button class="btn btn-success">Thêm mới</button>
+    </form>
+    <br><hr>
+    <!-- Nhập hai số tính tổng hai số -->
+
+    <form action="" ng-submit="tinhTong()">
+        <label for="">Số 1</label>
+        <input type="text" class="form-control" ng-model="number.one">
+
+        <label for="">Số 2</label>
+        <input type="text" class="form-control" ng-model="number.two">
+
+        <label for="">Tổng</label>
+        <input type="text" class="form-control" ng-model="sum">
+
+        <button class="btn btn-success">Tổng</button>
+    </form>
+</div>

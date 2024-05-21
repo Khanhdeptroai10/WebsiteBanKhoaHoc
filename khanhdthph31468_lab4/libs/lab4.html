@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/khanhdthph31468_lab4/libs/angular.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body ng-app="lab4">
+
+    <div class="w-[1000px] mx-auto ">
+        <div ng-controller="demobai1">
+            <div class="text-3xl font-bold text-[black]">Bài 1:</div>
+            <img src={{photo}} alt="">
+            <ul>
+                <li>Ho va ten: {{fullname}}</li>
+                <li>Ngay sinh: {{birthday}}</li>
+                <li>Gioi tinh: {{gender}} </li>
+                <li>Diem: {{mark}}</li>
+            </ul>
+        </div>
+        <hr>
+        <div ng-controller="demobai2">
+            <div class="text-3xl font-bold text-[black]">Bài 2:</div>
+            <table class="table">
+                <tr>
+                    <td>Ảnh</td>
+                    <td>Họ và tên</td>
+                    <td>Ngay sinh</td>
+                    <td>Gioi tinh</td>
+                    <td>Diem</td>
+                </tr>
+                <tr>
+                    <td><img src={{student[0].photo}} alt=""></td>
+                    <td>{{student[0].fullname}}</td>
+                    <td>{{student[0].birthday}}</td>
+                    <td>{{student[0].gender}}</td>
+                    <td>{{student[0].mark}}</td>
+                </tr>
+
+            </table>
+        </div>
+        <hr>
+        <div ng-controller="demobai2">
+            <div class="text-3xl font-bold text-[black]">Bài 3:</div>
+            <table class="table">
+                <tr>
+                    <td>Ảnh</td>
+                    <td>Họ và tên</td>
+                    <td>Ngay sinh</td>
+                    <td>Gioi tinh</td>
+                    <td>Diem</td>
+                </tr>
+                <tr ng-repeat="items in student">
+                    <td><img src={{items.photo}} alt=""></td>
+                    <td>{{items.fullname}}</td>
+                    <td>{{items.birthday}}</td>
+                    <td>{{items.gender}}</td>
+                    <td>{{items.mark}}</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div ng-controller="demobai4">
+            <div class="text-3xl font-bold text-center text-[black]">Bài 4:</div>
+            <form>
+                <div class="form-group">
+                    <label>Chiều dài </label><br>
+                    <input ng-model="length" class="form-control" placeholder="10">
+                </div>
+                <div class="form-group">
+                    <label>Chiều rộng </label><br>
+                    <input ng-model="width" class="form-control" placeholder="20">
+                </div>
+                <div class="form-group">
+                    <label>Chu vi: </label><br>
+                    <div ng-bind="perimeter" class="form-control" ></div>
+                </div>
+                <div class="form-group">
+                    <label>Diện tích: </label><br>
+                    <div ng-bind="acreage" class="form-control"></div>
+                </div>
+                <hr>
+
+
+            </form>
+            <button class="btn btn-default bg-blue-300" ng-click="calculate()">Calculate</button>
+        </div>
+
+        <br>
+        <hr>
+        <div ng-controller="demobai5">
+            <div class="text-3xl font-bold text-[black]">Bài 5:</div>
+            <form>
+                <div class="form-group">
+                    <label>Họ và tên </label><br>
+                    <input ng-model="student.fullname" class="form-control" placeholder="KhanhDepTroai">
+                </div>
+                <div class="form-group">
+                    <label>Ngày sinh </label><br>
+                    <input ng-model="student.birthday" class="form-control" placeholder="10-10-2030">
+                </div>
+                <div class="form-group">
+                    <label>Giới tính </label><br>
+                    <select ng-model="student.gender" class="form-control">
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Điểm </label><br>
+                    <input ng-model="student.mark" class="form-control" placeholder="10">
+                </div>
+                <div class="form-group">
+                    <label>Học lực: </label>
+                    <div ng-bind="student.grade" class="form-control" placeholder="200"></div>
+                </div>
+                <hr>
+                <div class="form-group ">
+                    <button class="btn btn-default  bg-blue-400 " ng-click="save()">Học lực</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="/khanhdthph31468_lab4/js/app.js"></script>
+</body>
+
+</html>

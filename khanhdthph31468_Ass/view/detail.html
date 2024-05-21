@@ -1,0 +1,51 @@
+<div class="w-[1000] m-8">
+    <div class=" text-5xl">
+        <h1>{{title}}</h1>
+    </div>
+
+    <form class="row">
+        <div class="col">
+            <label> Họ và tên</label>
+            <input type="text" class="form-control" placeholder="Nguyễn Văn A" ng-model="student.ten" disabled>
+            <br>
+            <label> Email</label>
+            <input type="text" class="form-control" placeholder="a@gmail.com" ng-model="student.email" disabled>
+            <br>
+            <label> Địa điểm học</label>
+            <select ng-model="student.diadiem" class="form-control" disabled>
+                <option>Chọn địa điểm học</option>
+                <option>Hà Nội</option>
+                <option>Cần Thơ</option>
+                <option>Hải Phòng</option>
+                <option>Hà Nam</option>
+                <option>Hồ Chí Minh</option>
+            </select>
+        </div>
+
+
+        <div class="col">
+            <label>Số điện thoại</label>
+            <input type="text" class="form-control" placeholder="Số điện thoại" ng-model="student.SDT" disabled>
+            <br>
+            <label> Ngành học</label>
+            <select ng-model="student.nganh" class="form-control" disabled>
+                <option>Chưa xác định được ngành</option>
+                <option>CNTT</option>
+                <option>UDPM</option>
+                <option>Logistic</option>
+            </select>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="form-group mt-4">
+            <a href="#!update/{{student.id}}"><button class="btn btn-primary ">Chỉnh sửa</button></a>
+           <a href="#!/Danhsach"> <button class="btn btn-success">Quay lại</button></a>
+        </div>
+    </form>
+    
+    
+
+
+
+</div>

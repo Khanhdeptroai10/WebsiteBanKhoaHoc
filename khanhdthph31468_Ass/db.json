@@ -1,0 +1,36 @@
+{
+  "student": [
+    {
+      "ten": "Đỗ Thị Hồng Khanh",
+      "email": "khanhdthph31468@fpt.edu.vn",
+      "diadiem": "Hà Nội",
+      "SDT": "0987654321",
+      "nganh": "UDPM",
+      "id": "8737"
+    },
+    {
+      "ten": "Đỗ Thị Khánh Ly",
+      "email": "lydthkph31445@fpt.edu.vn",
+      "diadiem": "Hồ Chí Minh",
+      "SDT": "0987654321",
+      "nganh": "Logistic",
+      "id": "a1ee"
+    },
+    {
+      "ten": "Lưu Thị Hải Yến",
+      "email": "yenlthph31153@fpt.edu.vn",
+      "diadiem": "Hà Nội",
+      "SDT": "0987654321",
+      "nganh": "UDPM",
+      "id": "0bc2"
+    },
+    {
+      "ten": "khanhdeptroai",
+      "email": "khanh@gmail.com",
+      "diadiem": "Hồ Chí Minh",
+      "SDT": "0987654321",
+      "nganh": "UDPM",
+      "id": "3451"
+    }
+  ]
+}

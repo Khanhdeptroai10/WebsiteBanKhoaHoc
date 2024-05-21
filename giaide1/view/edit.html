@@ -1,0 +1,28 @@
+<div>
+    <h1>{{title}}</h1>
+    <form ng-submit="edit()">
+        <label for="">ID</label>
+        <input type="text" class="form-control" ng-model="quanao.id">
+        <p class="text-danger" ng-if="kiemtra.id">Vui long nhap ID</p>
+
+        <label for="">ten</label>
+        <input type="text" class="form-control" ng-model="quanao.ten">
+        <p class="text-danger" ng-if="kiemtra.ten">Vui long nhap ten</p>
+
+        <label for="">loai</label>
+        <select class="form-control" ng-model="quanao.loai" >
+            <option>aophong</option>
+            <option>aolen</option>
+            <option>aosomi</option>
+        </select>
+        <p class="text-danger" ng-if="kiemtra.loai">Vui long chon loai</p>
+
+        <label for="">Gia</label>
+        <input type="text" class="form-control" ng-model="quanao.gia">
+        <p class="text-danger" ng-if="kiemtra.gia">Vui long nhap gia</p>
+
+        <div>
+            <button>Luu</button>
+        </div>
+    </form>
+</div>

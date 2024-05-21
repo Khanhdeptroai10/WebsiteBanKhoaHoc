@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- 
+        Khai báo min rồi mới khai báo route
+     -->
+    <script src="/demo/libs/angular.min.js"></script>
+    <script src="/demo/libs/angular-route.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#!trang-chu">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!gioi-Thieu">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tin tức</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main ng-view></main>
+    <footer>
+        <h1 class="bg-secondary">Đây là Footer</h1>
+    </footer>
+    <script src="/demo/controller/trangchuController.js"></script>
+    <script src="/demo/controller/gioiThieuController.js"></script>
+
+    <script>
+        // khai báo vùng
+        let myApp = angular.module('app', ['ngRoute']);
+        // ngRoute: cung cấp chức năng định tuyến hỗ trợ việc chuyển trang
+        myApp.config(function ($routeProvider) {
+            // config: cấu hình các tham số khỏi tạo
+            // $routeProvider: mặc định ko thể thay đổi
+
+            $routeProvider
+                .when('/trang-chu', {
+                    templateUrl: 'view/Trangchu.html',
+                    controller: trangchuController
+                })
+                .when('/gioi-Thieu', {
+                    templateUrl: 'view/gioiThieu.html',
+                    controller: gioiThieuController
+                })
+
+        })
+    </script>
+</body>
+
+</html>

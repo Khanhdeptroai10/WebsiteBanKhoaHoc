@@ -1,0 +1,26 @@
+<div>
+    <h1>{{title}}</h1>
+    <form >
+        <label for="">ID</label>
+        <input type="text" class="form-control" ng-model="quanao.id" disabled>
+    
+        <label for="">ten</label>
+        <input type="text" class="form-control" ng-model="quanao.ten" disabled>
+       
+        <label for="">loai</label>
+        <select class="form-control" ng-model="quanao.loai" disabled >
+            <option>aophong</option>
+            <option>aolen</option>
+            <option>aosomi</option>
+        </select>
+       
+        <label for="">Gia</label>
+        <input type="text" class="form-control" ng-model="quanao.gia" disabled>
+       
+
+        <div>
+            <a href="#!/list-phone"><button>quay lai</button></a>
+            <a href="#!/edit/phone/{{quanao.id}}"><button>Chinh sua</button></a>
+        </div>
+    </form>
+</div>

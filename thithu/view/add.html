@@ -1,0 +1,33 @@
+<div>
+    <h1>{{title}}</h1>
+
+    <form ng-submit="add()">
+        <label for="">ID</label>
+        <input type="text" class="form-control" ng-model="nhanvien.id">
+
+        <label for="">Ho ten</label>
+        <input type="text" class="form-control" ng-model="nhanvien.ten">
+
+        <label for="">SDT</label>
+        <input type="text" class="form-control" ng-model="nhanvien.sdt">
+
+        <label for="">Email</label>
+        <input type="text" class="form-control" ng-model="nhanvien.email">
+
+        <label for="">Chuc vu</label>
+        <select class="form-control" ng-model="nhanvien.chucvu">
+            <option >giamdoc</option>
+            <option >nhanvien</option>
+            <option>truongphong</option>
+        </select>
+
+        <label for="">Ngay sinh</label>
+        <input type="date" class="form-select" ng-model="nhanvien.ngaysinh">
+        
+        <div class="text-center m-3">
+            <button class="btn btn-success" >Thêm mới</button>
+            <button class="btn btn-secondary">Reset</button>
+        </div>
+    </form>
+
+</div>

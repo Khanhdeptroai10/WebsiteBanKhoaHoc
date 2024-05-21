@@ -1,0 +1,62 @@
+<div class="w-[1000] m-20">
+    <div class=" text-5xl">
+        <b class="text-cyan-950">ĐĂNG KÝ</b> <br>
+        <strong class="text-[red]">TRỰC TUYẾN</strong>
+    </div>
+    <br>
+    <b>Bạn vui lòng điền đầy đủ thông tin cá nhân vào bảng đăng ký xét tuyển trực tuyến bên cạnh để tư vấn viên
+        của trường liên hệ với bạn giải đáp các thắc mắc hoàn toàn miễn phí. Chúng tôi sẽ chủ động liên hệ lại
+        với bạn trong vòng 24h kể từ khi nhận được thông tin đăng ký.\
+    </b>
+    <br>
+
+    <form class="row" ng-submit="">
+        <div class="col">
+            <label> Họ và tên</label>
+            <input type="text" class="form-control" placeholder="Nguyễn Văn A" ng-model="student.ten" >
+            <div ng-if="kiemtra.ten" class="text-danger">Bạn cần nhập họ và tên</div>
+            <br>
+            <label> Email</label>
+            <input type="text" class="form-control" placeholder="a@gmail.com" ng-model="student.email">
+            <div ng-if="kiemtra.email" class="text-danger">Bạn cần nhập email</div>
+            <br>
+            <label> Địa điểm học</label>
+            <select ng-model="student.diadiem" class="form-control">
+                <option>Chọn địa điểm học</option>
+                <option>Hà Nội</option>
+                <option>Cần Thơ</option>
+                <option>Hải Phòng</option>
+                <option>Hà Nam</option>
+                <option>Hồ Chí Minh</option>
+            </select>
+            <div ng-if="kiemtra.diadiem" class="text-danger">Bạn cần chọn địa điểm học</div>
+        </div>
+
+
+        <div class="col">
+            <label>Số điện thoại</label>
+            <input type="text" class="form-control" placeholder="Số điện thoại" ng-model="student.SDT">
+            <div ng-if="kiemtra.SDT" class="text-danger">Bạn cần nhập số điện thoại</div>
+            <br>
+            <label> Ngành học</label>
+            <select ng-model="student.nganh" class="form-control">
+                <option>Chưa xác định được ngành</option>
+                <option>CNTT</option>
+                <option>UDPM</option>
+                <option>Logistic</option>
+            </select>
+            <div ng-if="kiemtra.nganh" class="text-danger">Bạn cần chọn ngành học</div>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="form-group mt-4">
+            <button class="btn btn-primary ">Đăng ký</button>
+        </div>
+    </form>
+    
+    
+
+
+
+</div>

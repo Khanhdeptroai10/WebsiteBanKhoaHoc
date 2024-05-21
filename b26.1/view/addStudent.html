@@ -1,0 +1,25 @@
+<div class="card mt-5">
+    <h1>{{title}}</h1>
+   <div>
+        
+        <form ng-submit="addStudent()">
+            <label for="" class="form-label">Họ tên</label>
+            <input type="text" class="form-control" ng-model="student.name">
+            <div ng-if="kiemtra.name" class="text-danger">Bạn cần nhập họ tên</div>
+
+            <label for="" class="form-label">Năm sinh</label>
+            <input type="text" class="form-control" ng-model="student.nam">
+            <div ng-if="kiemtra.namSinh" class="text-danger">Bạn cần nhập năm sinh</div>
+
+            <label for="" class="form-label">Chuyên ngành</label>
+            <input type="text" class="form-control " ng-model="student.nganh">
+            <div ng-if="kiemtra.chuyenNganh" class="text-danger">Bạn cần nhập chuyên ngành</div>
+
+            <div class="text-center m-3">
+                <button class="btn btn-success" >Thêm mới</button>
+                <button class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
+        
+   </div>
+</div>

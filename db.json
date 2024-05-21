@@ -1,0 +1,92 @@
+{
+  "student": [
+    {
+      "ten": "Đỗ Thị Hồng Khanh",
+      "namSinh": 2000,
+      "chuyenNganh": "CNTT",
+      "id": "1f93"
+    },
+    {
+      "ten": "Lưu Thị Hải Yến",
+      "namSinh": 2000,
+      "chuyenNganh": "CNTT",
+      "id": "f229"
+    },
+    {
+      "ten": "Đỗ Thị Khánh Ly",
+      "namSinh": 2000,
+      "chuyenNganh": "CNTT",
+      "id": "bbab"
+    },
+    {
+      "id": "9ee2",
+      "ten": "h",
+      "namSinh": "j",
+      "chuyenNganh": "j"
+    }
+  ],
+  "nhanvien": [
+    {
+      "ten": "Lưu Thị Hải Yến",
+      "sdt": "0987654321",
+      "email": "a@gmail",
+      "chucvu": "giamdoc",
+      "ngaysinh": "2003-10-10",
+      "id": "a1"
+    },
+    {
+      "ten": "Đỗ Thị Hồng Khanh",
+      "sdt": "0987654321",
+      "email": "a@gmail",
+      "chucvu": "truongphong",
+      "ngaysinh": "2003-10-09",
+      "id": "a2"
+    },
+    {
+      "ten": "Đỗ Thị Hồng Khanh",
+      "sdt": "0987654321",
+      "email": "a@gmail",
+      "chucvu": "nhanvien",
+      "ngaysinh": "2003-10-09",
+      "id": "a3"
+    },
+    {
+      "id": "a6",
+      "ten": "khanh",
+      "sdt": "0987654321",
+      "email": "s",
+      "chucvu": "giamdoc",
+      "ngaysinh": "2003-12-10"
+    },
+    {
+      "id": "a5",
+      "ten": "e",
+      "sdt": "e",
+      "email": "e",
+      "chucvu": "giamdoc",
+      "ngaysinh": "2000-12-11"
+    },
+    {
+      "id": "a6",
+      "ten": "khanh",
+      "sdt": "087654321",
+      "email": "khanh",
+      "chucvu": "giamdoc",
+      "ngaysinh": "2024-2-13"
+    }
+  ],
+  "quanao": [
+    {
+      "id": "a2",
+      "ten": "Ao dep",
+      "loai": "aophong",
+      "gia": 102
+    },
+    {
+      "id": "w",
+      "ten": "w",
+      "loai": "w",
+      "gia": "w"
+    }
+  ]
+}

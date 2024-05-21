@@ -1,0 +1,18 @@
+<div class="card mt-5">
+    <h1>{{title}}</h1>
+    <form>
+        <label for="" class="form-label">Họ tên</label>
+        <input type="text" class="form-control" ng-model="student.ten" disabled>
+
+        <label for="" class="form-label">Năm sinh</label>
+        <input type="text" class="form-control" ng-model="student.namSinh" disabled>
+
+        <label for="" class="form-label">Chuyên ngành</label>
+        <input type="text" class="form-control " ng-model="student.chuyenNganh" disabled>
+
+        <div class="text-center m-3">
+            <a href="#!/trang-chu"> <button class="btn btn-success" >Quay lại</button></a>
+            <a href="#!/edit-Student/{{student.editID}}"><button class="btn btn-secondary">Chỉnh sửa</button></a>
+        </div>
+    </form>
+</div>

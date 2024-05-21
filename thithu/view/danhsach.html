@@ -1,0 +1,29 @@
+<div>
+    <h1>{{title}}</h1>
+    <a href="#!/add"><button class="btn btn-success">Them moi</button></a>
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>Họ tên</td>
+            <td>SDT</td>
+            <td>Email</td>
+            <td>Chức vụ</td>
+            <td>Ngày sinh</td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="item in nhanvien">
+            <td>{{item.id}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.sdt}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.chucvu}}</td>
+            <td>{{item.ngaysinh}}</td>
+            <td>
+                <a href="#!/edit/{{item.id}}"><button class="btn btn-success">Chinh sua</button></a>
+                <a href="" ng-click="delete(item.id)"><button class="btn btn-danger">Xoa</button></a>
+                <a href="#!/detail/{{item.id}}"><button class="btn btn-secondary">Chi tiet</button></a>
+            </td>
+        </tr>
+    </table>
+
+</div>

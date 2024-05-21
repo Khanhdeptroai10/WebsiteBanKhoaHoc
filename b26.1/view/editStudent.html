@@ -1,0 +1,19 @@
+<div class="card mt-5">
+    <h1>{{title}}</h1>
+    <form ng-submit="editStudent()">
+        <label for="" class="form-label">Họ tên</label>
+        <input type="text" class="form-control" ng-model="student.ten" >
+
+        <label for="" class="form-label">Năm sinh</label>
+        <input type="text" class="form-control" ng-model="student.namSinh" >
+
+        <label for="" class="form-label">Chuyên ngành</label>
+        <input type="text" class="form-control " ng-model="student.chuyenNganh" >
+
+        <div class="text-center m-3">
+            <button class="btn btn-success" type="reset">Reset</button>
+            <button class="btn btn-secondary" type="reset">Chỉnh sửa</button>
+
+        </div>
+    </form>
+</div>

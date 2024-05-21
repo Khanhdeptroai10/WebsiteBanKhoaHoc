@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" />
+</head>
+
+<body>
+    <div class="w-[800px] mx-auto">
+        <div class="text-3xl font-bold text-center text-[red]">Bài 1: Tạo bảng</div>
+        <div class="flex flex-col mb-6">
+            <div class="overflow-x-auto">
+                <div class="inline-block min-w-full">
+                    <div class="overflow-hidden">
+                        <div class="bg-neutral-50 py-3 px-5 text-slate-700">
+                            <span class="icon-list text-black"></span>
+                            BẢNG LƯƠNG THÁNG 12
+                        </div>
+
+                        <table class="min-w-full divide-y divide-neutral-200/70 border">
+                            <thead class="divide-y divide-neutral-200/70">
+                                <tr class="text-neutral-800">
+                                    <th rowspan="2" class="px-5 py-3 text-lg font-bold text-left uppercase">MÃ NV</th>
+                                    <th rowspan="2" class="px-5 py-3 text-lg font-bold text-left uppercase">HỌ VÀ TÊN
+                                    </th>
+                                    <th colspan="3" class="px-5 py-3 text-lg font-bold text-left uppercase text-center">
+                                        THU NHẬP</th>
+                                </tr>
+                                <tr class="text-neutral-800">
+                                    <th class="px-5 py-3 text-lg font-bold text-left uppercase">LƯƠNG</th>
+                                    <th class="px-5 py-3 text-lg font-bold text-left uppercase">THƯỞNG</th>
+                                    <th class="px-5 py-3 text-lg font-bold text-left uppercase">PHỤ CẤP</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-neutral-200/70">
+                                <tr class="text-neutral-600 bg-neutral-50">
+                                    <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV001</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">Nguyễn Công Phượng</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">5000000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">5000000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">0</td>
+                                </tr>
+                                <tr class="text-neutral-800">
+                                    <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV002</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">Phan Văn Tài Em</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">9000000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">600000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">100000</td>
+                                </tr>
+                                <tr class="text-neutral-600 bg-neutral-50">
+                                    <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV003</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">Lê Huỳnh Đức</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">7000000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">300000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">200000</td>
+                                </tr>
+                                <tr class="text-neutral-800">
+                                    <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV004</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">Én</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">5000000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">500000</td>
+                                    <td class="px-5 py-4 text-sm whitespace-nowrap">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="bg-neutral-50 py-3 px-5 text-slate-600">
+                            Lương của cầu thủ và huấn luyện viên chuyên nghiệp
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-3xl font-bold text-center text-[red]">Bài 2: Thiết kế form</div>
+        <div class="flex flex-col mb-6">
+            <div class="overflow-x-auto">
+                <div class="inline-block min-w-full">
+                    <div class="overflow-hidden">
+                        <div class="bg-neutral-50 py-3 px-5 text-slate-700">
+                            <span class="icon-note text-black"></span>
+                            NHẬP LƯƠNG THÁNG 12
+                        </div>
+
+                        <form class="border px-3 pt-6">
+                            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                <div>
+                                    <label for="ma_nhan_vien"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mã nhân
+                                        viên</label>
+                                    <input type="text" id="first_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="NV001" required>
+                                </div>
+                                <div>
+                                    <label for="ho_va_ten"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Họ và
+                                        tên</label>
+                                    <input type="text" id="last_name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Én" required>
+                                </div>
+                                <div>
+
+                                    <label for="countries"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Câu lạc
+                                        bộ</label>
+                                    <select id="countries"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>Chọn một câu lạc bộ</option>
+                                        <option value="US">Đà Nẵng</option>
+                                        <option value="CA">Hà Nội</option>
+                                        <option value="FR">Hải Phòng</option>
+                                        <option value="DE">Yên Bái</option>
+                                    </select>
+
+                                </div>
+                                <div>
+                                    <label for="luong"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lương</label>
+                                    <input type="tel" id="phone"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="5000000" required>
+                                </div>
+                                <div>
+                                    <label for="website"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thưởng</label>
+                                    <input type="url" id="website"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="500000" required>
+                                </div>
+                                <div>
+                                    <label for="visitors"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phụ
+                                        cấp</label>
+                                    <input type="number" id="visitors"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="0" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="message"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ghi chú</label>
+                                <textarea id="message" rows="4"
+                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="hihihi"></textarea>
+                            </div>
+
+                            <div class="mb-6">
+                                <button type="submit"
+                                    class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+                                    <span class="icon-check text-black"></span>
+                                    Lưu</button>
+                                <button type="button"
+                                    class="relative inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                                    <span
+                                        class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        <span class="icon-close text-black"></span>
+                                        Huỷ
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="bg-neutral-50 py-3 px-5 text-slate-600">
+                            Vui lòng nhập thông tin lương cầu thủ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-3xl font-bold text-center text-[red]">Bài 3: Thiết kế tabs</div>
+        <div
+            class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mb-6">
+            <ul class="flex flex-wrap -mb-px">
+                <li id="u" class="tablinks me-2">
+                    <a href="#"
+                        class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">
+                        <span class="icon-note"></span>
+                        CẬP NHẬT</a>
+                </li>
+                <li id="l" class="tablinks me-2">
+                    <a href="#"
+                        class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300">
+                        <span class="icon-list"></span>
+                        DANH SÁCH</a>
+                </li>
+            </ul>
+
+            <div id="update" class="tabcontent">
+                <div class="bg-neutral-50 py-3 px-5 text-slate-700">
+                    <span class="icon-note text-black"></span>
+                    NHẬP LƯƠNG THÁNG 12
+                </div>
+
+                <form class="border px-3 pt-6">
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div>
+                            <label for="ma_nhan_vien"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mã nhân
+                                viên</label>
+                            <input type="text" id="first_name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="NV001" required>
+                        </div>
+                        <div>
+                            <label for="ho_va_ten"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Họ và
+                                tên</label>
+                            <input type="text" id="last_name"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Én" required>
+                        </div>
+                        <div>
+
+                            <label for="countries"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Câu lạc
+                                bộ</label>
+                            <select id="countries"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option selected>Chọn một câu lạc bộ</option>
+                                <option value="US">Đà Nẵng</option>
+                                <option value="CA">Hà Nội</option>
+                                <option value="FR">Hải Phòng</option>
+                                <option value="DE">Yên Bái</option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <label for="luong"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lương</label>
+                            <input type="tel" id="phone"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="5000000" required>
+                        </div>
+                        <div>
+                            <label for="website"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thưởng</label>
+                            <input type="url" id="website"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="500000" required>
+                        </div>
+                        <div>
+                            <label for="visitors"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phụ
+                                cấp</label>
+                            <input type="number" id="visitors"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="0" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ghi
+                            chú</label>
+                        <textarea id="message" rows="4"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="hihihi"></textarea>
+                    </div>
+
+                    <div class="mb-6">
+                        <button type="submit"
+                            class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+                            <span class="icon-check text-black"></span>
+                            Lưu</button>
+                        <button
+                            class="relative inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                            <span
+                                class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                <span class="icon-close text-black"></span>
+                                Huỷ
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="bg-neutral-50 py-3 px-5 text-slate-600">
+                    Vui lòng nhập thông tin lương cầu thủ
+                </div>
+            </div>
+
+            <div id="list" class="tabcontent hidden">
+                <table class="min-w-full divide-y divide-neutral-200/70 border">
+                    <thead class="divide-y divide-neutral-200/70">
+                        <tr class="text-neutral-800">
+                            <th rowspan="2" class="px-5 py-3 text-lg font-bold text-left uppercase">MÃ NV</th>
+                            <th rowspan="2" class="px-5 py-3 text-lg font-bold text-left uppercase">HỌ VÀ TÊN
+                            </th>
+                            <th colspan="3" class="px-5 py-3 text-lg font-bold text-left uppercase text-center">
+                                THU NHẬP</th>
+                        </tr>
+                        <tr class="text-neutral-800">
+                            <th class="px-5 py-3 text-lg font-bold text-left uppercase">LƯƠNG</th>
+                            <th class="px-5 py-3 text-lg font-bold text-left uppercase">THƯỞNG</th>
+                            <th class="px-5 py-3 text-lg font-bold text-left uppercase">PHỤ CẤP</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-neutral-200/70">
+                        <tr class="text-neutral-600 bg-neutral-50">
+                            <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV001</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">Nguyễn Công Phượng</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">5000000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">5000000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">0</td>
+                        </tr>
+                        <tr class="text-neutral-800">
+                            <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV002</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">Phan Văn Tài Em</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">9000000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">600000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">100000</td>
+                        </tr>
+                        <tr class="text-neutral-600 bg-neutral-50">
+                            <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV003</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">Lê Huỳnh Đức</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">7000000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">300000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">200000</td>
+                        </tr>
+                        <tr class="text-neutral-800">
+                            <td class="px-5 py-4 text-sm font-medium whitespace-nowrap">NV004</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">Én</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">5000000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">500000</td>
+                            <td class="px-5 py-4 text-sm whitespace-nowrap">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="bg-neutral-50 py-3 px-5 text-slate-600">
+                    Lương của cầu thủ và huấn luyện viên chuyên nghiệp
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-3xl font-bold text-center text-[red]">Bài 4: Thiết kế hộp thoại</div>
+        <div class="text-center">
+            <!-- Modal toggle -->
+            <button id="modal-open" type="button"
+                class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-6">
+                <span class="icon-note text-black"></span>
+                Nhập lương tháng 12
+            </button>
+        </div>
+        <!-- Main modal -->
+        <div id="modal-show" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div
+                        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            <span class="icon-note text-black"></span>
+                            NHẬP LƯƠNG THÁNG 12
+                        </h3>
+                        <button id="modal-close" type="button"
+                            class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="authentication-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="flex flex-col mb-6">
+                        <div class="overflow-x-auto">
+                            <div class="inline-block min-w-full">
+                                <div class="overflow-hidden">
+                                    <form class="border px-3 pt-6">
+                                        <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                            <div>
+                                                <label for="ma_nhan_vien"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mã
+                                                    nhân
+                                                    viên</label>
+                                                <input type="text" id="first_name"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="NV001">
+                                            </div>
+                                            <div>
+                                                <label for="ho_va_ten"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Họ
+                                                    và
+                                                    tên</label>
+                                                <input type="text" id="last_name"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Én">
+                                            </div>
+                                            <div>
+
+                                                <label for="countries"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Câu
+                                                    lạc
+                                                    bộ</label>
+                                                <select id="countries"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                    <option selected>Chọn một câu lạc bộ</option>
+                                                    <option value="US">Đà Nẵng</option>
+                                                    <option value="CA">Hà Nội</option>
+                                                    <option value="FR">Hải Phòng</option>
+                                                    <option value="DE">Yên Bái</option>
+                                                </select>
+
+                                            </div>
+                                            <div>
+                                                <label for="luong"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Lương</label>
+                                                <input type="tel" id="phone"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="5000000" required>
+                                            </div>
+                                            <div>
+                                                <label for="website"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thưởng</label>
+                                                <input type="url" id="website"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="500000" required>
+                                            </div>
+                                            <div>
+                                                <label for="visitors"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phụ
+                                                    cấp</label>
+                                                <input type="number" id="visitors"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="0" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-6">
+                                            <label for="message"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ghi
+                                                chú</label>
+                                            <textarea id="message" rows="4"
+                                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="hihihi"></textarea>
+                                        </div>
+
+                                        <div class="mb-6">
+                                            <button type="submit"
+                                                class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2">
+                                                <span class="icon-check text-black"></span>
+                                                Lưu</button>
+                                            <button id="cancel" type="button"
+                                                class="relative inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                                                <span
+                                                    class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                                    <span class="icon-close text-black"></span>
+                                                    Huỷ
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<div>
+    <h1>{{title}}</h1>
+    <a href="#!/add"><button>Thêm</button></a>
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>Họ tên</td>
+            <td>loại</td>
+            <td>Giá</td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="item in quanao">
+            <td>{{item.id}}</td>
+            <td>{{item.ten}}</td>
+            <td>{{item.loai}}</td>
+            <td>{{item.gia}}</td>
+            <td>
+                <a href="#!/edit/{{item.id}}"><button class="btn btn-success">CHỉnh sửa</button></a>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Xóa
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn có muốn xóa không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" ng-click="delete(item.id)">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+                <a href="#!/detail/{{item.id}}"><button class="btn btn-danger">Chi tiết</button></a>
+            </td>
+        </tr>
+    </table>   
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/angularjs/list/angular.min.js"></script>
+    <title>Angular JS</title>
+</head>
+<!-- để có thể khởi tạo chương trình chúng ta phải định nghĩa vùng sử dụng -->
+<!-- ng-app:định nghĩa cho vùng sử dụng -->
+<body ng-app="demo">
+    <div ng-controller="demoController">
+        <h1>{{ xinchao }}</h1>
+
+    </div>
+
+<!-- Khoi tao controller moi
+    Hien thi ten nam sinh va chuyen nganh
+ -->
+
+    <div ng-controller="infor">
+        <h1>Ten: {{ten}}</h1>
+        <h1>Nam sinh: {{namSinh}}</h1>
+        <!-- <h1>Chuyen nganh: {{chuyenNganh}}</h1> -->
+        <h1 ng-bind="chuyenNganh"></h1>
+
+        <h1>Danh sach sinh vien:</h1>
+        <table border="1">
+            <tr>
+                <td>Ten</td>
+                <td>Nam sinh</td>
+                <td>Chuyen nganh</td>
+            </tr>
+            <tr>
+                <td>{{ student[0].ten}}</td>
+                <td>{{student[0].namSinh}}</td>
+                <td>{{student[0].chuyenNganh}}</td>
+            </tr>
+            <tr>
+                <td>{{ student[1].ten}}</td>
+                <td>{{student[1].namSinh}}</td>
+                <td>{{student[1].chuyenNganh}}</td>
+            </tr>
+        </table>
+
+        <h1>Danh sach sinh vien</h1>
+        <table border="1">
+            <tr>
+                <td>Ten</td>
+                <td>Nam sinh</td>
+                <td>Chuyen nganh</td>
+            </tr>
+            <tr ng-repeat="items in student">
+                <td>{{items.ten}}</td>
+                <td>{{items.namSinh}}</td>
+                <td>{{items.chuyenNganh}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+    <!-- Nhúng link trực tiếp -->
+    <script src="/angularjs/js/buoi4.js"></script>
+</body>
+</html>
